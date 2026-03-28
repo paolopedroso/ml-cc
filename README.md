@@ -1,11 +1,17 @@
 # ML Crash Course
----
-## Folder `./LinearReg`
-- `linear-regression-raw.ipynb`
-    - contains linear regression from scratch
-- `linear-regression-tf.py`
-    - contains linear regression with tensorflow
 
-## `./LogisticReg`
-- `classification-raw.ipynb`
-    - containts logistic regression / classification from scratch
+## LinearReg
+Run from `LinearReg/` with `./run.sh <target>`:
+
+| Target | File |
+|---|---|
+| `mnist-tf` | tf/mnist/mnist-tf.py |
+| `salary-tf` | tf/salary/salary-tf.py |
+| `salary-torch` | torch/salary/salary-torch.py |
+| `medical-torch` | torch/medical-insurance/medical-insurance-torch.py |
+| `bestsellers-torch` | torch/bestsellers/model.py |
+
+`linear-regression-raw.ipynb` - linear regression from scratch
+
+## LogisticReg
+`classification-raw.ipynb` - logistic regression / classification from scratch
