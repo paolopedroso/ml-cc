@@ -31,7 +31,7 @@ class ProcessedData:
 		if not isinstance(self.y_dirty, (pd.DataFrame, pd.Series)):
 			raise ValueError
 		
-		self.X_clean = self.y_dirty.fillna(self.X_dirty.median())
+		self.X_clean = self.X_dirty.fillna(self.X_dirty.median())
 		self.y_clean = self.y_dirty.fillna(self.y_dirty.median())
 	
 	def get_dirty_data(self):
@@ -226,9 +226,8 @@ class Trainer:
 			self.optimizer.zero_grad() # clear gradients
 			y_pred = self.model(X) # linear regression equation
 			loss = self.loss_fn(y_pred, y_actual) # calculate mse loss
-			loss.backward() # update gradient
-			self.optimizer.step()
-
+			loss.backward() # computes gradient
+			self.optimizer.step() # update weights
 			if epoch % 10 == 0:
 				print(f"Epoch {epoch:>4}  |  Loss: {loss.item():.2f}")
 			self.loss_history.append(loss.detach().item())
