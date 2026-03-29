@@ -1,3 +1,6 @@
 __pycache__
+llama-env
 data
 plot
+.env
+.venv*
